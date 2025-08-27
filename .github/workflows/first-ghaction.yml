@@ -1,14 +1,11 @@
-name: FirstWorkflow
-
-on: push
-
+name: secondjob
+on: [push, workflow_dispatch]
 jobs:
-   my-firstjob:
-     runs-on: ubuntu-latest
-
-     steps:
-       - name: print a message
-         run: echo "hello from my first github action"
-
-       - name: check liniting
-         run: echo "Lingting cheing ......"
+  test-code:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print working directory
+        run: |
+          pwd 
+          ls -a
+          echo $GITHUB_WORKSPACE
