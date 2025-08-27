@@ -1,0 +1,14 @@
+name: FirstWorkflow
+
+on: push
+
+jobs:
+   my-firstjob:
+     runs-on: ubuntu-latest
+
+     steps:
+       - name: print a message
+         run: echo "hello from my first github action"
+
+       - name: check liniting
+         run: echo "Lingting cheing ......"
